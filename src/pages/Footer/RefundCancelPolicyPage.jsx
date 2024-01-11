@@ -6,10 +6,10 @@ const RefundCancelPolicyPage = () => {
   return (
     <div className=" container mx-auto p-4 capitalize">
                    <Helmet>
-        <title>Executive Team | Pink Home Stay</title>
+        <title>Refund & Cancel Policy | Pink Home Stay</title>
       </Helmet>
          <div className="mb-4">
-      <img src="https://i.ibb.co/HHLdxs5/Blue-Modern-Hawaii-Traveler-Youtube-Thumbnail.png" alt="Banner" className="w-full mb-4 rounded-lg" />
+      <img src="https://i.ibb.co/Mg6wb0X/Blue-And-White-Modern-Travel-Facebook-Fundraiser-Cover-Photo.jpg" alt="Banner" className="w-full mb-4 rounded-lg" />
 
       <nav className="text-gray-600 font-semibold text-xl text-center my-8">
         <Link to="/" className="hover:text-rose-500">

@@ -79,7 +79,6 @@ const Login = () => {
                 name='email'
                 id='email'
                 required
-                defaultValue={'guest@pinkhomestay.web.app'}
                 placeholder='Enter Your Email Here'
                 className='w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-rose-500 bg-gray-200 text-gray-900'
                 data-temp-mail-org='0'
@@ -96,7 +95,6 @@ const Login = () => {
                   autoComplete='new-password'
                   id='password'
                   required
-                  defaultValue={'Guest@123'}
                   placeholder='*******'
                   className='w-full px-3 py-2 border rounded-md border-gray-300 focus:outline-rose-500 bg-gray-200 text-gray-900 pr-10'
                 />

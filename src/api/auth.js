@@ -16,7 +16,7 @@ export const saveUser = async user => {
     acc:'none',
     pay:'none',
     about:'none',
-    cover:'https://i.ibb.co/HHLdxs5/Blue-Modern-Hawaii-Traveler-Youtube-Thumbnail.png',
+    cover:'https://i.ibb.co/GRP7k0L/Blue-Modern-Hawaii-Traveler-Youtube-Thumbnail.png',
   }
   const { data } = await axiosSecure.put(`/users/${user?.email}`, currentUser)
 

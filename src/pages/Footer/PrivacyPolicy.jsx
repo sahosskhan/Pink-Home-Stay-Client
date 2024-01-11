@@ -17,7 +17,7 @@ const PrivacyPolicy = () => {
       </Helmet>
           <img
             className="mx-auto mb-4 "
-            src="https://i.ibb.co/HHLdxs5/Blue-Modern-Hawaii-Traveler-Youtube-Thumbnail.png"
+            src="https://i.ibb.co/Mg6wb0X/Blue-And-White-Modern-Travel-Facebook-Fundraiser-Cover-Photo.jpg"
             alt="Privacy Policy Banner"
           />
       </div>
