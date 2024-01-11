@@ -1,0 +1,5 @@
+{"_id":{"$oid":"658dd04a914a76de0383e60c"},
+"email":"admin@pink-home-stay.web.app",
+"role":"admin",
+"status":"Verified",
+"timestamp":{"$numberDouble":"1703792714569.0"}}
