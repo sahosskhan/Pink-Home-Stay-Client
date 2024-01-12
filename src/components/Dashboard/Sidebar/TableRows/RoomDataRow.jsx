@@ -20,55 +20,55 @@ const RoomDataRow = ({ room, refetch }) => {
     deleteRoom(id)
       .then(data => {
         refetch()
-        toast.success('Room deleted')
+        toast.success('Room deleted 😭')
       })
-      .catch(err => toast.error(err?.message))
+      .catch(err => console.log(err))
     closeModal()
   }
   return (
     <tr>
-      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+      <td className='px-5 py-5 border-b border-gray-200 bg-white text-base'>
         <div className='flex items-center'>
           <div className='flex-shrink-0'>
             <div className='block relative'>
               <img
                 alt='profile'
                 src={room?.image}
-                className='mx-auto object-cover rounded-full h-6 w-6 '
+                className='mx-auto object-cover rounded-full h-10 w-10 '
               />
             </div>
           </div>
-          <div className='ml-3 w-40'>
+          <div className='ml-3 w-80'>
             <p className='text-gray-900 whitespace-no-wrap'>{room?.title}</p>
           </div>
         </div>
       </td>
-      <td className='px-5 py-5 border-b w-40 border-gray-200 bg-white text-sm'>
-        <p className='text-gray-900 whitespace-no-wrap'>{room?.location}</p>
+      <td className='px-5 py-5 border-b  border-gray-200 bg-white text-base'>
+        <p className='text-gray-900 w-80 whitespace-no-wrap'>{room?.location}</p>
       </td>
-      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+      <td className='px-5 py-5 border-b  border-gray-200 bg-white text-base'>
         <p className='text-gray-900 whitespace-no-wrap'>${room?.price}</p>
       </td>
-      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+      <td className='px-5 py-5 border-b border-gray-200 bg-white text-base'>
         <p className='text-gray-900 whitespace-no-wrap'>
           {format(new Date(room?.from), 'P')}
         </p>
       </td>
-      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+      <td className='px-5 py-5 border-b border-gray-200 bg-white text-base'>
         <p className='text-gray-900 whitespace-no-wrap'>
           {format(new Date(room?.to), 'P')}
         </p>
       </td>
-      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+      <td className='px-5 py-5 border-b border-gray-200 bg-white text-base'>
         <span
           onClick={openModal}
-          className='relative cursor-pointer inline-block px-3 py-1 font-semibold text-green-900 leading-tight'
+          className='relative cursor-pointer inline-block px-3 py-1 font-semibold text-black leading-tight'
         >
           <span
             aria-hidden='true'
             className='absolute inset-0 bg-red-200 opacity-50 rounded-full'
           ></span>
-          <span className='relative'>Delete</span>
+          <span className='relative flex gap-x-2'>Delete <i className="fa-solid fa-trash-can"></i></span>
         </span>
         <DeleteModal
           isOpen={isOpen}
@@ -77,16 +77,16 @@ const RoomDataRow = ({ room, refetch }) => {
           id={room._id}
         />
       </td>
-      <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+      <td className='px-5 py-5 border-b border-gray-200 bg-white text-base'>
         <span
           onClick={() => setIsEditModalOpen(true)}
-          className='relative cursor-pointer inline-block px-3 py-1 font-semibold text-green-900 leading-tight'
+          className='relative cursor-pointer inline-block px-3 py-1 font-semibold text-black leading-tight'
         >
           <span
             aria-hidden='true'
             className='absolute inset-0 bg-green-200 opacity-50 rounded-full'
           ></span>
-          <span className='relative'>Update</span>
+          <span className='relative flex gap-x-2'>Update <i className="fa-regular fa-pen-to-square"></i></span>
         </span>
         <UpdateRoomModal
           isOpen={isEditModalOpen}

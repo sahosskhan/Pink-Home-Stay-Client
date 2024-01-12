@@ -54,6 +54,9 @@ const RoomReservation = ({ room }) => {
     return total * room?.price;
   };
 
+
+
+
   const totalPrice = calculateTotalPrice();
 
   const [bookingInfo, setBookingInfo] = useState({
@@ -61,6 +64,8 @@ const RoomReservation = ({ room }) => {
       name: userData?.name,
       email: userData?.email,
       image: userData?.photo,
+      phone: userData?.phone,
+      address: userData?.address,
     },
     host: room?.host?.email,
     location: room?.location,
@@ -69,6 +74,8 @@ const RoomReservation = ({ room }) => {
     from: value.startDate,
     title: room?.title,
     roomId: room?._id,
+    hostImage: room?.host?.image,
+    hostName:room?.host?.name,
     image: room?.image,
   });
 

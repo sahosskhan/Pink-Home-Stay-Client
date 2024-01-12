@@ -29,7 +29,7 @@ const SalesLineChart = ({ data }) => {
         <>
           <Loader smallHeight />
           <p className='text-center'>
-            Not enough data available for this section!
+           😭 Not enough data available for this section!
           </p>
         </>
       )}

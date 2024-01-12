@@ -23,7 +23,7 @@ const UpdateRoomModal = ({ setIsEditModalOpen, isOpen, refetch, room, id }) => {
         setLoading(false)
       })
       .catch(err => {
-        toast.error(err?.message)
+        console.log(err)
         setLoading(false)
       })
   }
@@ -35,13 +35,13 @@ const UpdateRoomModal = ({ setIsEditModalOpen, isOpen, refetch, room, id }) => {
     setLoading(true)
     updateRoom(updatedData, id)
       .then(data => {
-        toast.success('Home info updated')
+        toast.success('Home info updated 😳')
         setLoading(false)
         refetch()
         setIsEditModalOpen(false)
       })
       .catch(err => {
-        toast.error(err?.message)
+        console.log(err)
         setLoading(false)
       })
   }

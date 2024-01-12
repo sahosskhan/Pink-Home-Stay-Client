@@ -172,7 +172,7 @@ const EditProfile = () => {
                 required
                 className='w-full px-4 py-3 border-rose-300 focus:outline-rose-500 rounded-md'
                 name='gender'
-                defaultChecked={userData?.gender}
+                defaultValue={userData?.gender}
               >
              <option value="Male">Male</option>
              <option value="Female">Female</option>
@@ -260,7 +260,7 @@ const EditProfile = () => {
                 required
                 className='w-full px-4 py-3 border-rose-300 focus:outline-rose-500 rounded-md'
                 name='pay'
-                defaultChecked={userData?.pay}
+                defaultValue={userData?.pay}
               >
              <option value="Visa Card">Visa Card</option>
              <option value="Master Card">Master Card</option>

@@ -27,7 +27,7 @@ const MenuDropdown = () => {
         toast.success('Please!, Wait for admin approval👊')
       }
     } catch (err) {
-      toast.error(err?.message)
+      console.log(err)
     } finally {
       setIsModalOpen(false)
     }
@@ -68,8 +68,8 @@ const MenuDropdown = () => {
         </div>
       </div>
       {isOpen && (
-        <div className='absolute rounded-xl shadow-md w-[40vw] md:w-[10vw] bg-white overflow-hidden right-0 top-12 text-sm'>
-          <div className='flex flex-col cursor-pointer'>
+        <div className='absolute rounded-xl shadow-md w-[44vw] md:w-[10vw] bg-white overflow-hidden right-0 top-12 text-sm'>
+          <div className='flex flex-col cursor-pointer w-48'>
             <Link
               to='/'
               className='block md:hidden px-4 py-3 hover:bg-neutral-100 transition font-semibold'

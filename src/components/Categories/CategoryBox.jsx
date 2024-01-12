@@ -28,7 +28,7 @@ const CategoryBox = ({ label, icon: Icon, selected }) => {
   items-center 
   justify-center 
   gap-2
-  p-3
+  p-5
   border-b-2
   hover:text-neutral-800
   transition

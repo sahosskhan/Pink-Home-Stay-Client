@@ -47,15 +47,15 @@ const CheckoutForm = ({ bookingInfo, closeModal }) => {
     })
 
     if (error) {
+      console.log('error', error)
       setCardError(error.message)
     } else {
       setCardError('')
-      toast.error('payment method', paymentMethod)
+      console.log('payment method', paymentMethod)
     }
 
     setProcessing(true)
-
-    // Ekhane taka katbe
+ 
     const { paymentIntent, error: confirmError } =
       await stripe.confirmCardPayment(clientSecret, {
         payment_method: {
@@ -68,10 +68,10 @@ const CheckoutForm = ({ bookingInfo, closeModal }) => {
       })
 
     if (confirmError) {
+      console.log(confirmError)
       setCardError(confirmError.message)
     }
-
-    toast.error('payment intent', paymentIntent)
+    console.log('payment method', paymentMethod)
 
     if (paymentIntent.status === 'succeeded') {
       const paymentInfo = {
@@ -89,6 +89,7 @@ const CheckoutForm = ({ bookingInfo, closeModal }) => {
         toast.success(text)
         navigate('/dashboard/my-bookings')
       } catch (err) {
+        console.log(err)
         toast.error(err?.message)
       } finally {
         setProcessing(false)
@@ -128,7 +129,7 @@ const CheckoutForm = ({ bookingInfo, closeModal }) => {
           <button
             type='submit'
             disabled={!stripe || !clientSecret || processing}
-            className='inline-flex justify-center rounded-md border border-transparent bg-green-100 px-4 py-2 text-sm font-medium text-green-900 hover:bg-green-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2'
+            className='inline-flex justify-center rounded-md border border-transparent bg-green-100 px-4 py-2 text-sm font-medium text-black hover:bg-green-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2'
           >
             {processing ? (
               <ImSpinner9 className='m-auto animate-spin' size={24} />

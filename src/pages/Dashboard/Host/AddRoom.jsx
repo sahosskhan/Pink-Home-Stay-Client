@@ -7,9 +7,11 @@ import useAuth from '../../../hooks/useAuth'
 import { addRoom } from '../../../api/rooms'
 import { toast } from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
+import useUserData from '../../../hooks/useUserData'
 const AddRoom = () => {
   const navigate = useNavigate()
   const { user } = useAuth()
+  const{userData} =useUserData();
   const [loading, setLoading] = useState(false)
   const [uploadButtonText, setUploadButtonText] = useState('Upload Image')
   const [dates, setDates] = useState({
@@ -34,9 +36,9 @@ const AddRoom = () => {
     const bedrooms = form.bedrooms.value
     const image = form.image.files[0]
     const host = {
-      name: user?.displayName,
-      image: user?.photoURL,
-      email: user?.email,
+      name: userData?.name,
+      image: userData?.photo,
+      email: userData?.email,
     }
     const image_url = await imageUpload(image)
 
@@ -61,6 +63,7 @@ const AddRoom = () => {
       toast.success('Room Added!')
       navigate('/dashboard/my-listings')
     } catch (err) {
+      console.log(err)
       toast.error(err.message)
     } finally {
       setLoading(false)

@@ -17,6 +17,18 @@ export const getRoom = async id => {
   const { data } = await axiosSecure(`/room/${id}`)
   return data
 }
+
+// Fetch single room data from db
+export const getBookingRoom = async id => {
+  const { data } = await axiosSecure(`/bookings-room/${id}`)
+  return data
+}
+
+
+
+
+
+
 // Save a room data in db
 export const addRoom = async roomData => {
   const { data } = await axiosSecure.post(`/rooms`, roomData)

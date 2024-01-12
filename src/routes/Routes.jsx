@@ -6,7 +6,7 @@ import Login from '../pages/Login/Login'
 import SignUp from '../pages/SignUp/SignUp'
 import RoomDetails from '../pages/RoomDetails/RoomDetails'
 import PrivateRoute from './PrivateRoute'
-import { getRoom } from '../api/rooms'
+import { getBookingRoom, getRoom } from '../api/rooms'
 import DashboardLayout from '../layouts/DashboardLayout'
 import AddRoom from '../pages/Dashboard/Host/AddRoom'
 import MyListings from '../pages/Dashboard/Host/MyListings'
@@ -25,6 +25,7 @@ import BecomeHostPolicyPage from '../pages/Footer/BecomeHostPolicyPage'
 import RefundCancelPolicyPage from '../pages/Footer/RefundCancelPolicyPage'
 import Contact from '../pages/Footer/Contact'
 import Team from '../pages/Footer/Team'
+import BookingsRoom from '../pages/Dashboard/Guest/BookingsRoom'
 
 export const router = createBrowserRouter([
   {
@@ -44,6 +45,15 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) => getRoom(params.id),
+      },
+      {
+        path: '/bookings-room/:id',
+        element: (
+          <PrivateRoute>
+            <BookingsRoom />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) => getBookingRoom(params.id),
       },
     ],
   },
