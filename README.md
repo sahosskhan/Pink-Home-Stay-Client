@@ -1,7 +1,7 @@
 # Pink Home Stay - An online marketplace for short- and long-term homestays and experiences.  
 
 ## Description
-Pink Home Stay is a MERN (MongoDB, Express.js, React.js, Node.js) stack project designed to manage & promote short- and long-term homestays and experiences business. It provides a platform for administrators, host & guest to efficiently deal & consume services of a restaurant. There are some features like reservation management, menu & items management, order management, and secure payment methods, Bite Cafe aims to be a comprehensive solution for managing & give best service for user in online restaurant platforms.
+Pink Home Stay is a MERN (MongoDB, Express.js, React.js, Node.js) stack project designed to manage & promote short- and long-term homestay experiences business. It provides a platform for administrators, host & guest to efficiently deal & consume homestay services. There are some features like booking management, room management, and secure payment methods, Bite Cafe aims to be a comprehensive solution for managing & giving best service for user in homestay experiences 
 
 ## Source Code:
 ## [ Client Side Code](https://github.com/sahosskhan/Pink-Home-Stay-Client)
